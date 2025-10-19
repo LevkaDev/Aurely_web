@@ -1,0 +1,14 @@
+# Aurely Website - robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://aurely.app/sitemap.xml
+
+# Crawl-delay (optional, adjust as needed)
+Crawl-delay: 1
+
+# Disallow specific paths (if any)
+# Disallow: /admin/
+# Disallow: /private/

@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Aurely - The Most Intelligent Reminder App for Mac. Create reminders naturally with voice, understand 11 languages, and never miss what matters. 100% offline and private.">
+    <meta name="keywords" content="macOS reminder app, voice reminder, multi-language, offline, privacy, glassmorphism">
+    <meta name="author" content="Aurely">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Aurely - The Most Intelligent Reminder App for Mac">
+    <meta property="og:description"
+        content="Create reminders naturally with voice, understand 11 languages, and never miss what matters. 100% offline and private.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aurely.app">
+    <meta property="og:image" content="https://aurely.app/images/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aurely - The Most Intelligent Reminder App for Mac">
+    <meta name="twitter:description"
+        content="Create reminders naturally with voice, understand 11 languages, and never miss what matters.">
+    <meta name="twitter:image" content="https://aurely.app/images/twitter-card.png">
+
+    <meta name="theme-color" content="#111827">
+    <link rel="canonical" href="https://aurely.app">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icon-32.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="images/icon-180.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icon-180.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/icon-512.png">
+
+    <title>Aurely - The Most Intelligent Reminder App for Mac</title>
+
+    <link rel="stylesheet" href="css/main.css?v=2">
+    <link rel="stylesheet" href="css/glassmorphism.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Privacy-friendly analytics by Plausible -->
+    <script async src="https://plausible.io/js/pa-6cYLXXIwPvXJCO3f3Fwil.js"></script>
+    <script>window.plausible = window.plausible || function () { (plausible.q = plausible.q || []).push(arguments) }, plausible.init = plausible.init || function (i) { plausible.o = i || {} }; plausible.init()</script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar glass">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="images/app-icon.png" alt="Aurely" class="nav-logo-img">
+                <span class="nav-title">Aurely</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="#languages">Languages</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="https://apps.apple.com/app/aurely/id6753872766" class="btn btn-primary">App Store</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge glass-light">
+                    <span class="badge-icon">🍎</span>
+                    <span>Exclusively for macOS 13.0+</span>
+                </div>
+
+                <h1 class="hero-title gradient-text">
+                    The Most Intelligent<br>
+                    Reminder App for Mac
+                </h1>
+
+                <p class="hero-subtitle">
+                    Ultra-fast reminder creation without unnecessary features.<br>
+                    Set reminders in seconds with voice or text in 11 languages.<br>
+                    Get notified exactly when you need it. 100% offline and private.
+                </p>
+
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <span class="feature-icon">🎤</span>
+                        <span>Voice Recording in 11 Languages</span>
+                    </div>
+                    <div class="hero-feature">
+                        <span class="feature-icon">🌍</span>
+                        <span>Text Parsing in 11 Languages</span>
+                    </div>
+                    <div class="hero-feature">
+                        <span class="feature-icon">🔒</span>
+                        <span>100% Offline & Private</span>
+                    </div>
+                    <div class="hero-feature">
+                        <span class="feature-icon">⚡</span>
+                        <span>Lightweight & Battery Friendly</span>
+                    </div>
+                </div>
+
+                <div class="hero-cta">
+                    <a href="https://apps.apple.com/app/aurely/id6753872766" style="display: inline-block;">
+                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                            alt="Download on the App Store" style="height: 60px; width: auto;">
+                    </a>
+                </div>
+
+                <p class="hero-requirements">
+                    macOS 13.0+ • Universal Binary (Apple Silicon & Intel) • < 10MB • Low CPU & Memory </p>
+            </div>
+
+            <div class="hero-image">
+                <div class="hero-screenshot glass">
+                    <img src="images/screenshots/main-window-light.png" alt="Aurely Main Window - Light Theme"
+                        loading="eager">
+                </div>
+                <div class="floating-element floating-1">
+                    <div class="glass-card">
+                        <span class="emoji">🎤</span>
+                        <span class="text">Voice Recording</span>
+                    </div>
+                </div>
+                <div class="floating-element floating-2">
+                    <div class="glass-card">
+                        <span class="emoji">🔔</span>
+                        <span class="text">Smart Notifications</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">Powerful Features</h2>
+                <p class="section-subtitle">
+                    Everything you need to manage reminders intelligently
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card glass">
+                    <div class="feature-icon">🎤</div>
+                    <h3 class="feature-title">Just Speak Your Mind</h3>
+                    <p class="feature-description">
+                        Record reminders naturally with your voice. Automatic transcription
+                        in 11 languages with smart priority detection from tone and keywords.
+                    </p>
+                    <div class="feature-tags">
+                        <span class="tag">11 Languages</span>
+                        <span class="tag">Real-time</span>
+                        <span class="tag">Smart Priority</span>
+                    </div>
+                </div>
+
+                <div class="feature-card glass">
+                    <div class="feature-icon">🌍</div>
+                    <h3 class="feature-title">Natural Language, Understood Perfectly</h3>
+                    <p class="feature-description">
+                        Type 'встреча завтра в 14:30' or 'meeting tomorrow at 2:30pm' -
+                        Aurely understands both. Advanced parsing in 11 languages.
+                    </p>
+                    <div class="feature-tags">
+                        <span class="tag">11 Languages</span>
+                        <span class="tag">Relative Time</span>
+                        <span class="tag">Auto-detect</span>
+                    </div>
+                </div>
+
+                <div class="feature-card glass">
+                    <div class="feature-icon">🔔</div>
+                    <h3 class="feature-title">Beautiful Custom Notifications</h3>
+                    <p class="feature-description">
+                        Aurely uses custom toast notifications for the best experience. Priority-based alerts with
+                        beautiful design - Low priority notifies once, High priority repeats until dismissed.
+                        Enable "Use Custom Toasts" in app Settings → Notifications for optimal functionality.
+                    </p>
+                    <div class="feature-tags">
+                        <span class="tag">Custom Toasts</span>
+                        <span class="tag">Priority Sounds</span>
+                        <span class="tag">Snooze</span>
+                    </div>
+                </div>
+
+                <div class="feature-card glass">
+                    <div class="feature-icon">⌨️</div>
+                    <h3 class="feature-title">Access from Anywhere</h3>
+                    <p class="feature-description">
+                        Press ⌘⇧R from any app to instantly record a reminder.
+                        Customizable hotkeys work system-wide without breaking your workflow.
+                    </p>
+                    <div class="feature-tags">
+                        <span class="tag">⌘⇧R</span>
+                        <span class="tag">Customizable</span>
+                        <span class="tag">System-wide</span>
+                    </div>
+                </div>
+
+                <div class="feature-card glass">
+                    <div class="feature-icon">🎨</div>
+                    <h3 class="feature-title">Glassmorphism Meets Productivity</h3>
+                    <p class="feature-description">
+                        Stunning translucent interface with 3 themes (Light, Dark, Blue) plus System auto-switching.
+                        Native macOS feel
+                        with smooth animations and accessibility compliance.
+                    </p>
+                    <div class="feature-tags">
+                        <span class="tag">3 Themes</span>
+                        <span class="tag">Auto-Switch</span>
+                        <span class="tag">Animations</span>
+                    </div>
+                </div>
+
+                <div class="feature-card glass">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title">Your Data Stays on Your Mac</h3>
+                    <p class="feature-description">
+                        All AI/ML processing happens on-device. Zero telemetry, no data
+                        collection, no network access. Complete privacy guarantee.
+                    </p>
+                    <div class="feature-tags">
+                        <span class="tag">Offline</span>
+                        <span class="tag">No Tracking</span>
+                        <span class="tag">Secure</span>
+                    </div>
+                </div>
+
+                <div class="feature-card glass">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">Lightweight & Battery Friendly</h3>
+                    <p class="feature-description">
+                        Optimized for MacBooks. Minimal CPU and memory usage means your battery lasts longer.
+                        Runs smoothly in the background without slowing down your Mac.
+                    </p>
+                    <div class="feature-tags">
+                        <span class="tag">Low CPU</span>
+                        <span class="tag">Low Memory</span>
+                        <span class="tag">Efficient</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">Try It Yourself</h2>
+                <p class="section-subtitle">
+                    See how Aurely parses natural language in real-time
+                </p>
+            </div>
+
+            <div class="demo-container glass">
+                <div class="demo-note"
+                    style="margin-bottom: 16px; padding: 12px; background: rgba(0, 122, 255, 0.1); border: 1px solid rgba(0, 122, 255, 0.3); border-radius: 12px; font-size: 14px; color: var(--text-secondary);">
+                    <strong style="color: var(--accent-blue);">English Demo:</strong> This interactive demo shows how
+                    Aurely parses English reminders. The full app supports 11 languages!
+                </div>
+
+                <textarea id="demo-input" class="demo-input"
+                    placeholder="Type a reminder like 'meeting tomorrow at 2pm'..."></textarea>
+
+                <button id="demo-parse" class="btn btn-primary">Parse Reminder</button>
+
+                <div id="demo-result" class="demo-result" style="display: none;">
+                    <h4>Parsed Result:</h4>
+                    <div class="result-item">
+                        <span class="result-label">📅 Date & Time:</span>
+                        <span id="result-datetime" class="result-value"></span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">⚡ Priority:</span>
+                        <span id="result-priority" class="result-value"></span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">😊 Emoji:</span>
+                        <span id="result-emoji" class="result-value"></span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">📝 Clean Text:</span>
+                        <span id="result-text" class="result-value"></span>
+                    </div>
+
+                    <div
+                        style="margin-top: 16px; padding: 12px; background: rgba(255, 152, 0, 0.1); border: 1px solid rgba(255, 152, 0, 0.3); border-radius: 12px; font-size: 13px; color: var(--text-secondary);">
+                        <strong style="color: var(--accent-orange);">⚠️ Demo Version:</strong> This is a simplified
+                        demonstration parser. The actual app uses more advanced algorithms and may produce different
+                        results with better accuracy.
+                    </div>
+
+                    <!-- Toast Creator Preview -->
+                    <div style="margin-top: 24px;">
+                        <h4 style="margin-bottom: 12px; font-size: 14px; color: var(--text-secondary);">Preview in App:
+                        </h4>
+                        <div id="toast-preview" class="toast-creator-preview">
+                            <!-- Toast will be rendered here by JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="demo-examples"></div>
+                <p>Try these examples:</p>
+                <div class="example-buttons">
+                    <button class="example-btn" data-text="call mom tomorrow at 3pm">📞 Call mom tomorrow at
+                        3pm</button>
+                    <button class="example-btn" data-text="meeting next Monday at 2:30pm">📅 Meeting next Monday at
+                        2:30pm</button>
+                    <button class="example-btn" data-text="buy groceries in 2 hours">🛒 Buy groceries in 2
+                        hours</button>
+                    <button class="example-btn" data-text="workout this evening">🏃 Workout this evening</button>
+                    <button class="example-btn" data-text="take medication at 9am">💊 Take medication at
+                        9am</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section id="languages" class="languages">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">11 Languages, One Beautiful App</h2>
+                <p class="section-subtitle">
+                    Speak and type in your native language
+                </p>
+            </div>
+
+            <div class="language-categories">
+                <div class="language-category glass">
+                    <h3>🎤 Voice Recognition</h3>
+                    <p class="category-count">11 Languages</p>
+                    <div class="language-list">
+                        <span class="lang-tag">🇩🇪 German</span>
+                        <span class="lang-tag">🇬🇧 English</span>
+                        <span class="lang-tag">🇪🇸 Spanish</span>
+                        <span class="lang-tag">🇫🇷 French</span>
+                        <span class="lang-tag">🇮🇳 Hindi</span>
+                        <span class="lang-tag">🇮🇹 Italian</span>
+                        <span class="lang-tag">🇯🇵 Japanese</span>
+                        <span class="lang-tag">🇰🇷 Korean</span>
+                        <span class="lang-tag">🇵🇹 Portuguese</span>
+                        <span class="lang-tag">🇷🇺 Russian</span>
+                        <span class="lang-tag">🇨🇳 Chinese</span>
+                    </div>
+                </div>
+
+                <div class="language-category glass">
+                    <h3>📝 Text Parsing</h3>
+                    <p class="category-count">11 Languages</p>
+                    <div class="language-list">
+                        <span class="lang-tag">🇩🇪 German</span>
+                        <span class="lang-tag">🇬🇧 English</span>
+                        <span class="lang-tag">🇪🇸 Spanish</span>
+                        <span class="lang-tag">🇫🇷 French</span>
+                        <span class="lang-tag">🇮🇳 Hindi</span>
+                        <span class="lang-tag">🇮🇹 Italian</span>
+                        <span class="lang-tag">🇯🇵 Japanese</span>
+                        <span class="lang-tag">🇰🇷 Korean</span>
+                        <span class="lang-tag">🇵🇹 Portuguese</span>
+                        <span class="lang-tag">🇷🇺 Russian</span>
+                        <span class="lang-tag">🇨🇳 Chinese</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">Simple, Transparent Pricing</h2>
+                <p class="section-subtitle">
+                    Try full features for 14 days, then choose your plan
+                </p>
+            </div>
+
+            <div class="pricing-cards">
+                <div class="pricing-card glass">
+                    <div class="pricing-badge">Free Trial</div>
+                    <h3 class="pricing-title">Free</h3>
+                    <div class="pricing-price">
+                        <span class="price-amount">$0</span>
+                        <span class="price-period">forever</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li class="feature-included">✓ 14-Day Full Trial</li>
+                        <li class="feature-included">✓ 5 Reminders per day</li>
+                        <li class="feature-included">✓ Low Priority only</li>
+                        <li class="feature-included">✓ All themes & customization</li>
+                        <li class="feature-excluded">✗ Unlimited reminders</li>
+                        <li class="feature-excluded">✗ Medium/High priority</li>
+                        <li class="feature-excluded">✗ Recurring reminders</li>
+                    </ul>
+                    <a href="#download" class="btn btn-secondary btn-block">Get Started</a>
+                </div>
+
+                <div class="pricing-card glass pricing-featured">
+                    <div class="pricing-badge featured">Most Popular</div>
+                    <h3 class="pricing-title">Pro</h3>
+                    <div class="pricing-price">
+                        <span class="price-amount">$9.99</span>
+                        <span class="price-period">one-time</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li class="feature-included">✓ Unlimited reminders</li>
+                        <li class="feature-included">✓ All priority levels</li>
+                        <li class="feature-included">✓ Recurring reminders</li>
+                        <li class="feature-included">✓ Advanced Creator</li>
+                        <li class="feature-included">✓ AI Priority Analysis</li>
+                        <li class="feature-included">✓ Lifetime updates</li>
+                        <li class="feature-included">✓ 14-Day money back</li>
+                    </ul>
+                    <a href="#download" class="btn btn-primary btn-block">Get Pro</a>
+                </div>
+            </div>
+
+            <div class="pricing-guarantee">
+                <span class="guarantee-icon">✓</span>
+                <span class="guarantee-text">14-Day Money Back Guarantee • No Subscription • Lifetime License</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Coming Next Section -->
+    <section id="roadmap" class="roadmap">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">What's Coming Next</h2>
+                <p class="section-subtitle">
+                    We're constantly improving Aurely. Here's what's on the horizon
+                </p>
+            </div>
+
+            <div class="roadmap-grid">
+                <div class="roadmap-card glass">
+                    <div class="roadmap-status status-progress">In Development</div>
+                    <div class="roadmap-icon">🧠</div>
+                    <h3 class="roadmap-title">Smarter Parser Algorithms</h3>
+                    <p class="roadmap-description">
+                        Continuous improvements to natural language understanding based on user feedback.
+                        Better date/time recognition, context awareness, and multi-language accuracy.
+                    </p>
+                    <div class="roadmap-timeline">Ongoing</div>
+                </div>
+
+                <div class="roadmap-card glass">
+                    <div class="roadmap-status status-progress">In Development</div>
+                    <div class="roadmap-icon">☁️</div>
+                    <h3 class="roadmap-title">iCloud Sync</h3>
+                    <p class="roadmap-description">
+                        Seamlessly sync your reminders across all your Apple devices.
+                        Set a reminder on your Mac, get notified on your iPhone.
+                    </p>
+                    <div class="roadmap-timeline">Coming Q1 2026</div>
+                </div>
+
+                <div class="roadmap-card glass">
+                    <div class="roadmap-status status-planned">Planned</div>
+                    <div class="roadmap-icon">📱</div>
+                    <h3 class="roadmap-title">iOS & iPadOS App</h3>
+                    <p class="roadmap-description">
+                        Native iOS companion app with the same beautiful design and powerful features.
+                        Create reminders on the go with voice or text.
+                    </p>
+                    <div class="roadmap-timeline">Coming Q2 2026</div>
+                </div>
+
+                <div class="roadmap-card glass">
+                    <div class="roadmap-status status-planned">Planned</div>
+                    <div class="roadmap-icon">🔔</div>
+                    <h3 class="roadmap-title">Custom Notification Behavior</h3>
+                    <p class="roadmap-description">
+                        Customize notification repeat intervals and sounds for each priority level.
+                        Adjust Low (15s), Medium (1m), and High (3m) priority timings to match your workflow.
+                    </p>
+                    <div class="roadmap-timeline">Coming Q2 2026</div>
+                </div>
+
+                <div class="roadmap-card glass">
+                    <div class="roadmap-status status-planned">Planned</div>
+                    <div class="roadmap-icon">🌐</div>
+                    <h3 class="roadmap-title">More Languages</h3>
+                    <p class="roadmap-description">
+                        Expanding language support for voice recognition and text parsing.
+                        Arabic, Turkish, Dutch, and more coming soon.
+                    </p>
+                    <div class="roadmap-timeline">Coming 2026</div>
+                </div>
+
+                <div class="roadmap-card glass">
+                    <div class="roadmap-status status-planned">Planned</div>
+                    <div class="roadmap-icon">🔗</div>
+                    <h3 class="roadmap-title">Integrations</h3>
+                    <p class="roadmap-description">
+                        Connect with Calendar, Shortcuts, and other productivity apps.
+                        Automate your workflow with powerful integrations.
+                    </p>
+                    <div class="roadmap-timeline">Coming 2026</div>
+                </div>
+            </div>
+
+            <div class="roadmap-cta">
+                <p class="roadmap-note">
+                    💡 Have a feature request? <a href="mailto:support@aurely.app"
+                        style="color: var(--accent-blue); text-decoration: none;">Let us know!</a>
+                    We love hearing from our users.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">Frequently Asked Questions</h2>
+                <p class="section-subtitle">
+                    Everything you need to know about Aurely
+                </p>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What makes Aurely different from other reminder apps?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Aurely combines voice recording, multi-language support (11 languages), and 100% offline
+                            operation. Unlike other apps, all AI processing happens on your Mac - no data ever leaves
+                            your device. Plus, the glassmorphism design makes it the most beautiful reminder app
+                            available.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Does Aurely work offline?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Aurely is 100% offline. All voice recognition, text parsing, and AI features work
+                            without internet connection. Your data never leaves your Mac, ensuring complete privacy.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What languages are supported?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Both voice recognition and text parsing support 11 languages: German, English, Spanish,
+                            French, Hindi, Italian, Japanese, Korean, Portuguese, Russian, and Chinese. The app
+                            interface is currently in English only.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What are the system requirements?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>macOS 13.0 (Ventura) or newer. Universal Binary supports both Apple Silicon and Intel Macs.
+                            Requires less than 10MB disk space and permissions for Microphone, Accessibility, and
+                            Notifications.
+                        </p>
+                        <p style="margin-top: 12px;"><strong>Important:</strong> For the best experience, enable "Use
+                            Custom Toasts" toggle in Aurely Settings → Notifications. This ensures priority-based
+                            reminders work correctly.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is there a subscription?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No! Aurely Pro is a one-time purchase of $9.99 for lifetime access. No recurring fees, no
+                            hidden costs. You get all future updates included.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How does the free trial work?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You get 14 days of full Pro features. After the trial, you can continue using the Free
+                            version (5 reminders/day, Low priority only) or upgrade to Pro for unlimited access.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Why do I need to enable custom notifications?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Aurely's custom toast notifications are essential for the app to work properly. They enable
+                            priority-based alerts, beautiful glassmorphism design, and smart repeat logic. Without
+                            custom toasts, you'll miss important reminders and lose key features.</p>
+                        <p style="margin-top: 12px;"><strong>Setup:</strong> Open Aurely → Settings → Notifications →
+                            Enable "Use Custom Toasts" toggle. Takes 5 seconds and dramatically improves your
+                            experience.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How can I contact support?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>For any questions, feedback, or support requests, email us at <a
+                                href="mailto:support@aurely.app"
+                                style="color: var(--accent-blue); text-decoration: none;">support@aurely.app</a>. We
+                            typically respond within 24 hours.</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Download CTA -->
+    <section id="download" class="download-cta">
+        <div class="container">
+            <div class="cta-content glass">
+                <h2 class="cta-title gradient-text">Ready to Never Miss What Matters?</h2>
+                <p class="cta-subtitle">
+                    Download Aurely today and experience the most intelligent reminder app for Mac
+                </p>
+
+                <div class="cta-buttons">
+                    <a href="https://apps.apple.com/app/aurely/id6753872766" style="display: inline-block;">
+                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                            alt="Download on the App Store" style="height: 60px; width: auto;">
+                    </a>
+                </div>
+
+                <div class="cta-features">
+                    <div class="cta-feature">✓ 14-Day Free Trial</div>
+                    <div class="cta-feature">✓ No Credit Card Required</div>
+                    <div class="cta-feature">✓ macOS 13.0+</div>
+                    <div class="cta-feature">✓ 100% Private</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/app-icon.png" alt="Aurely" class="footer-logo-img">
+                    <span class="footer-title">Aurely</span>
+                    <p class="footer-tagline">The Most Intelligent Reminder App for Mac</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#download">Download</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="#demo">Demo</a></li>
+                            <li><a href="mailto:support@aurely.app">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Aurely. Made with ❤️ for Mac users.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/parser-demo.js"></script>
+    <!-- <script src="js/animations.js"></script> -->
+
+    <!-- Handle URL parameters -->
+    <script>
+        // Track referral parameters for analytics
+        const urlParams = new URLSearchParams(window.location.search);
+        const ref = urlParams.get('ref');
+        if (ref && window.plausible) {
+            plausible('pageview', { props: { referrer: ref } });
+        }
+    </script>
+</body>
+
+</html>
