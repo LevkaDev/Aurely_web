@@ -1,6 +1,0 @@
-# Netlify/Vercel redirects for clean URLs
-/privacy /privacy.html 200
-/help /privacy.html 301
-
-# Fallback for SPA
-/* /index.html 200
