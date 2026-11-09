@@ -184,7 +184,7 @@ const sectionObserver = new IntersectionObserver(revealSection, {
 // });
 
 // Card hover effect with tilt
-document.querySelectorAll('.feature-card, .pricing-card').forEach(card => {
+document.querySelectorAll('.feature-card').forEach(card => {
     card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;

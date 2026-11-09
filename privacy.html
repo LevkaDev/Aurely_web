@@ -4,24 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Auraly Privacy Policy - 100% offline, no data collection, complete privacy guarantee">
+    <meta name="description" content="Aurely Privacy Policy - what data Aurely uses, where it is stored, and how integrations work.">
     <meta name="robots" content="index, follow">
-    
-    <title>Privacy Policy - Auraly</title>
-    
-    <link rel="stylesheet" href="css/main.css?v=2">
+    <link rel="canonical" href="https://aurely.app/privacy.html">
+
+    <title>Privacy Policy - Aurely</title>
+
+    <link rel="stylesheet" href="css/main.css?v=3">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/responsive.css">
-    
+
     <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="32x32" href="images/icon-32.png">
     <link rel="icon" type="image/png" sizes="180x180" href="images/icon-180.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/icon-180.png">
     <link rel="icon" type="image/png" sizes="512x512" href="images/icon-512.png">
-    
+
     <!-- Privacy-friendly analytics by Plausible -->
     <script async src="https://plausible.io/js/pa-6cYLXXIwPvXJCO3f3Fwil.js"></script>
     <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
+
+    <!-- Theme initialization - must be before DOM loads to prevent flash -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
 </head>
 
 <body>
@@ -29,18 +38,19 @@
     <nav class="navbar glass">
         <div class="container">
             <div class="nav-brand">
-                <img src="images/app-icon.png" alt="Auraly" class="nav-logo-img">
-                <span class="nav-title">Auraly</span>
+                <img src="images/app-icon.png" alt="Aurely" class="nav-logo-img">
+                <span class="nav-title">Aurely</span>
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html#features">Features</a></li>
                 <li><a href="index.html#demo">Demo</a></li>
                 <li><a href="index.html#languages">Languages</a></li>
-                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="integrations.html">Integrations</a></li>
                 <li><a href="index.html#faq">FAQ</a></li>
             </ul>
             <div class="nav-actions">
-                <a href="https://apps.apple.com/app/aurely" class="btn btn-primary">App Store</a>
+                <button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">☀️</button>
+                <a href="https://apps.apple.com/app/aurely/id6753872766" class="btn btn-primary">App Store</a>
             </div>
             <button class="nav-toggle" aria-label="Toggle menu">
                 <span></span>
@@ -55,60 +65,152 @@
         <div class="container">
             <div class="privacy-header" style="text-align: center; margin-bottom: 60px;">
                 <h1 class="gradient-text" style="font-size: 3rem; margin-bottom: 16px;">Privacy Policy</h1>
-                <p style="font-size: 1.1rem; color: var(--text-secondary);">Last updated: October 2025</p>
+                <p style="font-size: 1.1rem; color: var(--text-secondary);">Last updated: November 9, 2026</p>
             </div>
 
             <div class="privacy-content glass" style="max-width: 800px; margin: 0 auto; padding: 40px; border-radius: 20px;">
-                <div class="privacy-guarantee" style="background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.3); border-radius: 12px; padding: 24px; margin-bottom: 40px; text-align: center;">
+                <div class="privacy-guarantee">
                     <div style="font-size: 2rem; margin-bottom: 12px;">🔒</div>
-                    <h2 style="color: var(--accent-green); margin-bottom: 8px; font-size: 1.3rem;">100% Privacy Guarantee</h2>
-                    <p style="margin: 0; color: var(--text-secondary);">Auraly does not collect, transmit, or store any personal information on external servers.</p>
+                    <h2 style="color: var(--accent-green); margin-bottom: 8px; font-size: 1.3rem;">Your Data Stays With You</h2>
+                    <p style="margin: 0; color: var(--text-secondary);">Aurely has no accounts and no servers of its own. We do not collect, sell, or have access to your personal data.</p>
                 </div>
 
                 <div class="privacy-sections">
-                    <div class="privacy-section" style="margin-bottom: 32px;">
-                        <h3 style="color: var(--text-primary); margin-bottom: 16px; font-size: 1.2rem;">📱 Local Storage Only</h3>
-                        <p style="line-height: 1.6; color: var(--text-secondary);">
-                            All reminders, settings, and recordings are stored locally on your Mac. Your data never leaves your device.
+                    <div class="privacy-section">
+                        <p>
+                            This Privacy Policy explains how the Aurely app for macOS ("Aurely", "the app") and the
+                            website aurely.app handle your information. If you have questions, contact us at
+                            <a href="mailto:support@aurely.app" style="color: var(--accent-blue); text-decoration: none;">support@aurely.app</a>.
                         </p>
                     </div>
 
-                    <div class="privacy-section" style="margin-bottom: 32px;">
-                        <h3 style="color: var(--text-primary); margin-bottom: 16px; font-size: 1.2rem;">🚫 No Tracking</h3>
-                        <p style="line-height: 1.6; color: var(--text-secondary);">
-                            The app does not use analytics, ads, or any tracking technologies. We don't know how you use the app, and we like it that way.
+                    <div class="privacy-section">
+                        <h3>📱 Data Stored on Your Mac</h3>
+                        <p style="margin-bottom: 12px;">
+                            Aurely stores the following data locally on your Mac only:
+                        </p>
+                        <ul style="margin: 0; padding-left: 20px;">
+                            <li><strong>Reminders</strong> you create, including their text, dates, and priority</li>
+                            <li><strong>App settings</strong>, such as theme, language, and hotkeys</li>
+                            <li><strong>Todoist API token</strong>, if you connect Todoist, stored securely in the macOS Keychain</li>
+                            <li><strong>Diagnostic logs</strong>, only if you turn on diagnostics in Settings</li>
+                        </ul>
+                        <p style="margin-top: 12px;">
+                            This data is never sent to us. Diagnostic logs stay on your Mac unless you choose to
+                            export them and send them to us yourself, for example when asking for support.
                         </p>
                     </div>
 
-                    <div class="privacy-section" style="margin-bottom: 32px;">
-                        <h3 style="color: var(--text-primary); margin-bottom: 16px; font-size: 1.2rem;">🤝 No Third Parties</h3>
-                        <p style="line-height: 1.6; color: var(--text-secondary);">
-                            No user data is shared with third parties. There are no third-party SDKs, analytics services, or advertising networks in Auraly.
+                    <div class="privacy-section">
+                        <h3>🎤 Voice Recordings</h3>
+                        <p>
+                            When you record a reminder by voice, Aurely uses Apple's built-in Speech Recognition to turn
+                            your speech into text. Aurely does not save your audio recordings. Depending on your macOS
+                            version and language, speech recognition may run on your Mac or may be processed by Apple.
+                            Processing by Apple is subject to
+                            <a href="https://www.apple.com/legal/privacy/" style="color: var(--accent-blue); text-decoration: none;">Apple's Privacy Policy</a>.
                         </p>
                     </div>
 
-                    <div class="privacy-section" style="margin-bottom: 32px;">
-                        <h3 style="color: var(--text-primary); margin-bottom: 16px; font-size: 1.2rem;">🔐 System Permissions</h3>
-                        <p style="line-height: 1.6; color: var(--text-secondary); margin-bottom: 12px;">
-                            Auraly may request local permissions (e.g., microphone access or notifications) only to provide its core features:
+                    <div class="privacy-section">
+                        <h3>🔗 Optional Integrations</h3>
+                        <p style="margin-bottom: 12px;">
+                            Integrations are turned off by default and only work after you enable them:
                         </p>
-                        <ul style="margin: 0; padding-left: 20px; color: var(--text-secondary); line-height: 1.6;">
-                            <li><strong>Microphone:</strong> For voice recording reminders</li>
+                        <ul style="margin: 0; padding-left: 20px;">
+                            <li><strong>Apple Calendar and Apple Reminders:</strong> Aurely reads and writes events and
+                                reminders on your Mac through macOS. If you use iCloud, Apple syncs this data between your
+                                devices under Apple's Privacy Policy.</li>
+                            <li><strong>Todoist:</strong> Aurely connects directly from your Mac to the Todoist API
+                                (api.todoist.com) using the API token you provide. The reminders you choose to sync are sent
+                                to and received from your Todoist account. This data is handled by Doist under the
+                                <a href="https://doist.com/privacy" style="color: var(--accent-blue); text-decoration: none;">Todoist Privacy Policy</a>.
+                                No data passes through our servers.</li>
+                        </ul>
+                        <p style="margin-top: 12px;">
+                            You can disconnect any integration at any time in Aurely Settings. Disconnecting Todoist
+                            removes the API token from your Keychain.
+                        </p>
+                    </div>
+
+                    <div class="privacy-section">
+                        <h3>🚫 No Tracking, Ads, or Third-Party SDKs</h3>
+                        <p>
+                            The app contains no analytics, advertising, or tracking. We do not use third-party SDKs, and
+                            we do not track you across apps or websites.
+                        </p>
+                    </div>
+
+                    <div class="privacy-section">
+                        <h3>🔐 System Permissions</h3>
+                        <p style="margin-bottom: 12px;">
+                            Aurely asks for the following macOS permissions only to provide its features:
+                        </p>
+                        <ul style="margin: 0; padding-left: 20px;">
+                            <li><strong>Microphone:</strong> To record voice reminders</li>
+                            <li><strong>Speech Recognition:</strong> To convert your voice into text</li>
                             <li><strong>Notifications:</strong> To alert you when reminders are due</li>
                             <li><strong>Accessibility:</strong> For global hotkeys (⌘⇧R)</li>
+                            <li><strong>Calendars and Reminders:</strong> Only if you enable these integrations</li>
                         </ul>
-                        <p style="line-height: 1.6; color: var(--text-secondary); margin-top: 12px;">
-                            These permissions are handled entirely by macOS and can be revoked at any time via System Settings.
+                        <p style="margin-top: 12px;">
+                            You can revoke any permission at any time in System Settings → Privacy &amp; Security.
                         </p>
                     </div>
 
-                    <div class="privacy-contact" style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 12px; padding: 24px; text-align: center;">
+                    <div class="privacy-section">
+                        <h3>🗑️ Data Retention and Deletion</h3>
+                        <p>
+                            Your data stays on your Mac for as long as you keep it. You can delete individual reminders in
+                            the app at any time. To remove all Aurely data, disconnect your integrations in Settings and then
+                            delete the app. Data that you synced to Apple Calendar, Apple Reminders, or Todoist stays in
+                            those services until you delete it there. Because we do not hold any of your data, there is
+                            nothing for us to delete on our side.
+                        </p>
+                    </div>
+
+                    <div class="privacy-section">
+                        <h3>🌐 This Website</h3>
+                        <p>
+                            The aurely.app website uses
+                            <a href="https://plausible.io/data-policy" style="color: var(--accent-blue); text-decoration: none;">Plausible Analytics</a>,
+                            a privacy-friendly service that counts page visits without cookies and without collecting
+                            personal data. The website stores your light or dark theme choice in your browser only.
+                        </p>
+                    </div>
+
+                    <div class="privacy-section">
+                        <h3>👶 Children</h3>
+                        <p>
+                            Aurely does not knowingly collect any personal information from anyone, including children.
+                        </p>
+                    </div>
+
+                    <div class="privacy-section">
+                        <h3>⚖️ Your Rights</h3>
+                        <p>
+                            Depending on where you live, for example in the European Union under the GDPR, you have rights to
+                            access, correct, and delete your personal data. Since Aurely keeps your data on your own device,
+                            you can exercise these rights directly in the app. For any questions, contact us at the email
+                            below.
+                        </p>
+                    </div>
+
+                    <div class="privacy-section">
+                        <h3>📝 Changes to This Policy</h3>
+                        <p>
+                            If we change this Privacy Policy, we will update it on this page and change the "Last updated"
+                            date above.
+                        </p>
+                    </div>
+
+                    <div class="privacy-contact">
                         <h3 style="color: var(--accent-blue); margin-bottom: 12px; font-size: 1.2rem;">Questions?</h3>
-                        <p style="margin-bottom: 16px; color: var(--text-secondary);">
+                        <p style="margin-bottom: 16px;">
                             If you have any questions about this Privacy Policy, you can contact us at:
                         </p>
-                        <a href="mailto:support@auraly.app" style="color: var(--accent-blue); text-decoration: none; font-weight: 500; font-size: 1.1rem;">
-                            support@auraly.app
+                        <a href="mailto:support@aurely.app" style="color: var(--accent-blue); text-decoration: none; font-weight: 500; font-size: 1.1rem;">
+                            support@aurely.app
                         </a>
                     </div>
                 </div>
@@ -125,8 +227,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <img src="images/app-icon.png" alt="Auraly" class="footer-logo">
-                    <span class="footer-title">Auraly</span>
+                    <img src="images/app-icon.png" alt="Aurely" class="footer-logo-img">
+                    <span class="footer-title">Aurely</span>
                     <p class="footer-tagline">The Most Intelligent Reminder App for Mac</p>
                 </div>
 
@@ -135,8 +237,8 @@
                         <h4>Product</h4>
                         <ul>
                             <li><a href="index.html#features">Features</a></li>
-                            <li><a href="index.html#pricing">Pricing</a></li>
-                            <li><a href="index.html#roadmap">Roadmap</a></li>
+                            <li><a href="index.html#download">Download</a></li>
+                            <li><a href="integrations.html">Integrations</a></li>
                         </ul>
                     </div>
 
@@ -145,7 +247,7 @@
                         <ul>
                             <li><a href="index.html#faq">FAQ</a></li>
                             <li><a href="index.html#demo">Demo</a></li>
-                            <li><a href="mailto:support@auraly.app">Contact</a></li>
+                            <li><a href="mailto:support@aurely.app">Contact</a></li>
                         </ul>
                     </div>
 
@@ -159,12 +261,12 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 Auraly. All rights reserved.</p>
-                <p class="footer-note">Made with ❤️ for Mac users who value privacy</p>
+                <p>&copy; 2026 Aurely. Made with ❤️ for Mac users.</p>
             </div>
         </div>
     </footer>
 
+    <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
 </body>
 

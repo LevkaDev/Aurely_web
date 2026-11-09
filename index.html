@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Aurely - The Most Intelligent Reminder App for Mac. Create reminders naturally with voice, understand 11 languages, and never miss what matters. 100% offline and private.">
-    <meta name="keywords" content="macOS reminder app, voice reminder, multi-language, offline, privacy, glassmorphism">
+        content="Aurely - The Most Intelligent Reminder App for Mac. Completely free. Create reminders naturally with voice, understand 11 languages, and never miss what matters. 100% offline and private.">
+    <meta name="keywords" content="free macOS reminder app, voice reminder, multi-language, offline, privacy, glassmorphism">
     <meta name="author" content="Aurely">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Aurely - The Most Intelligent Reminder App for Mac">
     <meta property="og:description"
-        content="Create reminders naturally with voice, understand 11 languages, and never miss what matters. 100% offline and private.">
+        content="Completely free. Create reminders naturally with voice, understand 11 languages, and never miss what matters. 100% offline and private.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://aurely.app">
     <meta property="og:image" content="https://aurely.app/images/og-image.png">
@@ -36,7 +36,7 @@
 
     <title>Aurely - The Most Intelligent Reminder App for Mac</title>
 
-    <link rel="stylesheet" href="css/main.css?v=2">
+    <link rel="stylesheet" href="css/main.css?v=3">
     <link rel="stylesheet" href="css/glassmorphism.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -46,6 +46,14 @@
     <!-- Privacy-friendly analytics by Plausible -->
     <script async src="https://plausible.io/js/pa-6cYLXXIwPvXJCO3f3Fwil.js"></script>
     <script>window.plausible = window.plausible || function () { (plausible.q = plausible.q || []).push(arguments) }, plausible.init = plausible.init || function (i) { plausible.o = i || {} }; plausible.init()</script>
+    
+    <!-- Theme initialization - must be before DOM loads to prevent flash -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
 </head>
 
 <body>
@@ -60,11 +68,11 @@
                 <li><a href="#features">Features</a></li>
                 <li><a href="#demo">Demo</a></li>
                 <li><a href="#languages">Languages</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="integrations.html">Integrations</a></li>
                 <li><a href="#faq">FAQ</a></li>
             </ul>
             <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">☀️</button>
                 <a href="https://apps.apple.com/app/aurely/id6753872766" class="btn btn-primary">App Store</a>
             </div>
             <button class="nav-toggle" aria-label="Toggle menu">
@@ -81,7 +89,7 @@
             <div class="hero-content">
                 <div class="hero-badge glass-light">
                     <span class="badge-icon">🍎</span>
-                    <span>Exclusively for macOS 13.0+</span>
+                    <span>Completely Free • Exclusively for macOS 13.0+</span>
                 </div>
 
                 <h1 class="hero-title gradient-text">
@@ -92,7 +100,7 @@
                 <p class="hero-subtitle">
                     Ultra-fast reminder creation without unnecessary features.<br>
                     Set reminders in seconds with voice or text in 11 languages.<br>
-                    Get notified exactly when you need it. 100% offline and private.
+                    Quick Actions in menu bar for instant access. Integrate with Calendar, Reminders, and Todoist with real-time sync. Get notified exactly when you need it. 100% offline and private.
                 </p>
 
                 <div class="hero-features">
@@ -114,11 +122,19 @@
                     </div>
                 </div>
 
-                <div class="hero-cta">
-                    <a href="https://apps.apple.com/app/aurely/id6753872766" style="display: inline-block;">
+                <div class="hero-cta" style="text-align: center;">
+                    <a href="https://apps.apple.com/app/aurely/id6753872766" style="display: inline-block; margin-bottom: 16px;">
                         <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
                             alt="Download on the App Store" style="height: 60px; width: auto;">
                     </a>
+                    
+                    <div>
+                        <a href="https://www.producthunt.com/products/auraly?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-aurely" target="_blank">
+                            <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1028453&theme=light&t=1761730233910" 
+                                 alt="Aurely - Private voice reminders for Mac with no cloud or accounts | Product Hunt" 
+                                 style="width: 250px; height: 54px;" width="250" height="54" />
+                        </a>
+                    </div>
                 </div>
 
                 <p class="hero-requirements">
@@ -128,7 +144,7 @@
             <div class="hero-image">
                 <div class="hero-screenshot glass">
                     <img src="images/screenshots/main-window-light.png" alt="Aurely Main Window - Light Theme"
-                        loading="eager">
+                         loading="lazy" decoding="async">
                 </div>
                 <div class="floating-element floating-1">
                     <div class="glass-card">
@@ -254,6 +270,27 @@
                         <span class="tag">Low CPU</span>
                         <span class="tag">Low Memory</span>
                         <span class="tag">Efficient</span>
+                    </div>
+                </div>
+
+                <div class="feature-card glass">
+                    <div class="feature-icon">🔗</div>
+                    <h3 class="feature-title">Seamless Integrations</h3>
+                    <p class="feature-description">
+                        Connect Aurely with Apple Calendar, Apple Reminders, and Todoist. Quick Actions in menu bar for instant reminder management. Two-way sync keeps everything in perfect harmony—when you change a reminder's time in Aurely, it updates across all connected services. Visual badges show sync status for all reminders. Complete control with privacy-first design.
+                    </p>
+                    <div class="feature-tags">
+                        <span class="tag">📅 Calendar</span>
+                        <span class="tag">🔔 Reminders</span>
+                        <span class="tag">✅ Todoist</span>
+                        <span class="tag">⚡ Quick Actions</span>
+                        <span class="tag">🔄 Real-time Sync</span>
+                        <span class="tag">Privacy-First</span>
+                    </div>
+                    <div style="margin-top: 16px;">
+                        <a href="integrations.html" style="color: var(--accent-blue); text-decoration: none; font-weight: 500; font-size: 0.9rem;">
+                            Learn more about integrations →
+                        </a>
                     </div>
                 </div>
             </div>
@@ -386,151 +423,6 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title gradient-text">Simple, Transparent Pricing</h2>
-                <p class="section-subtitle">
-                    Try full features for 14 days, then choose your plan
-                </p>
-            </div>
-
-            <div class="pricing-cards">
-                <div class="pricing-card glass">
-                    <div class="pricing-badge">Free Trial</div>
-                    <h3 class="pricing-title">Free</h3>
-                    <div class="pricing-price">
-                        <span class="price-amount">$0</span>
-                        <span class="price-period">forever</span>
-                    </div>
-                    <ul class="pricing-features">
-                        <li class="feature-included">✓ 14-Day Full Trial</li>
-                        <li class="feature-included">✓ 5 Reminders per day</li>
-                        <li class="feature-included">✓ Low Priority only</li>
-                        <li class="feature-included">✓ All themes & customization</li>
-                        <li class="feature-excluded">✗ Unlimited reminders</li>
-                        <li class="feature-excluded">✗ Medium/High priority</li>
-                        <li class="feature-excluded">✗ Recurring reminders</li>
-                    </ul>
-                    <a href="#download" class="btn btn-secondary btn-block">Get Started</a>
-                </div>
-
-                <div class="pricing-card glass pricing-featured">
-                    <div class="pricing-badge featured">Most Popular</div>
-                    <h3 class="pricing-title">Pro</h3>
-                    <div class="pricing-price">
-                        <span class="price-amount">$9.99</span>
-                        <span class="price-period">one-time</span>
-                    </div>
-                    <ul class="pricing-features">
-                        <li class="feature-included">✓ Unlimited reminders</li>
-                        <li class="feature-included">✓ All priority levels</li>
-                        <li class="feature-included">✓ Recurring reminders</li>
-                        <li class="feature-included">✓ Advanced Creator</li>
-                        <li class="feature-included">✓ AI Priority Analysis</li>
-                        <li class="feature-included">✓ Lifetime updates</li>
-                        <li class="feature-included">✓ 14-Day money back</li>
-                    </ul>
-                    <a href="#download" class="btn btn-primary btn-block">Get Pro</a>
-                </div>
-            </div>
-
-            <div class="pricing-guarantee">
-                <span class="guarantee-icon">✓</span>
-                <span class="guarantee-text">14-Day Money Back Guarantee • No Subscription • Lifetime License</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- What's Coming Next Section -->
-    <section id="roadmap" class="roadmap">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title gradient-text">What's Coming Next</h2>
-                <p class="section-subtitle">
-                    We're constantly improving Aurely. Here's what's on the horizon
-                </p>
-            </div>
-
-            <div class="roadmap-grid">
-                <div class="roadmap-card glass">
-                    <div class="roadmap-status status-progress">In Development</div>
-                    <div class="roadmap-icon">🧠</div>
-                    <h3 class="roadmap-title">Smarter Parser Algorithms</h3>
-                    <p class="roadmap-description">
-                        Continuous improvements to natural language understanding based on user feedback.
-                        Better date/time recognition, context awareness, and multi-language accuracy.
-                    </p>
-                    <div class="roadmap-timeline">Ongoing</div>
-                </div>
-
-                <div class="roadmap-card glass">
-                    <div class="roadmap-status status-progress">In Development</div>
-                    <div class="roadmap-icon">☁️</div>
-                    <h3 class="roadmap-title">iCloud Sync</h3>
-                    <p class="roadmap-description">
-                        Seamlessly sync your reminders across all your Apple devices.
-                        Set a reminder on your Mac, get notified on your iPhone.
-                    </p>
-                    <div class="roadmap-timeline">Coming Q1 2026</div>
-                </div>
-
-                <div class="roadmap-card glass">
-                    <div class="roadmap-status status-planned">Planned</div>
-                    <div class="roadmap-icon">📱</div>
-                    <h3 class="roadmap-title">iOS & iPadOS App</h3>
-                    <p class="roadmap-description">
-                        Native iOS companion app with the same beautiful design and powerful features.
-                        Create reminders on the go with voice or text.
-                    </p>
-                    <div class="roadmap-timeline">Coming Q2 2026</div>
-                </div>
-
-                <div class="roadmap-card glass">
-                    <div class="roadmap-status status-planned">Planned</div>
-                    <div class="roadmap-icon">🔔</div>
-                    <h3 class="roadmap-title">Custom Notification Behavior</h3>
-                    <p class="roadmap-description">
-                        Customize notification repeat intervals and sounds for each priority level.
-                        Adjust Low (15s), Medium (1m), and High (3m) priority timings to match your workflow.
-                    </p>
-                    <div class="roadmap-timeline">Coming Q2 2026</div>
-                </div>
-
-                <div class="roadmap-card glass">
-                    <div class="roadmap-status status-planned">Planned</div>
-                    <div class="roadmap-icon">🌐</div>
-                    <h3 class="roadmap-title">More Languages</h3>
-                    <p class="roadmap-description">
-                        Expanding language support for voice recognition and text parsing.
-                        Arabic, Turkish, Dutch, and more coming soon.
-                    </p>
-                    <div class="roadmap-timeline">Coming 2026</div>
-                </div>
-
-                <div class="roadmap-card glass">
-                    <div class="roadmap-status status-planned">Planned</div>
-                    <div class="roadmap-icon">🔗</div>
-                    <h3 class="roadmap-title">Integrations</h3>
-                    <p class="roadmap-description">
-                        Connect with Calendar, Shortcuts, and other productivity apps.
-                        Automate your workflow with powerful integrations.
-                    </p>
-                    <div class="roadmap-timeline">Coming 2026</div>
-                </div>
-            </div>
-
-            <div class="roadmap-cta">
-                <p class="roadmap-note">
-                    💡 Have a feature request? <a href="mailto:support@aurely.app"
-                        style="color: var(--accent-blue); text-decoration: none;">Let us know!</a>
-                    We love hearing from our users.
-                </p>
-            </div>
-        </div>
-    </section>
-
     <!-- FAQ Section -->
     <section id="faq" class="faq">
         <div class="container">
@@ -596,23 +488,14 @@
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>Is there a subscription?</span>
+                        <span>Is Aurely really free?</span>
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>No! Aurely Pro is a one-time purchase of $9.99 for lifetime access. No recurring fees, no
-                            hidden costs. You get all future updates included.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>How does the free trial work?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>You get 14 days of full Pro features. After the trial, you can continue using the Free
-                            version (5 reminders/day, Low priority only) or upgrade to Pro for unlimited access.</p>
+                        <p>Yes! Aurely is completely free. Every feature is available to everyone: unlimited
+                            reminders, all priority levels, recurring reminders, Advanced Creator, AI Priority Analysis,
+                            and integrations with Calendar, Reminders, and Todoist. No subscriptions, no in-app
+                            purchases, no limits.</p>
                     </div>
                 </div>
 
@@ -652,19 +535,27 @@
             <div class="cta-content glass">
                 <h2 class="cta-title gradient-text">Ready to Never Miss What Matters?</h2>
                 <p class="cta-subtitle">
-                    Download Aurely today and experience the most intelligent reminder app for Mac
+                    Download Aurely for free and experience the most intelligent reminder app for Mac
                 </p>
 
-                <div class="cta-buttons">
-                    <a href="https://apps.apple.com/app/aurely/id6753872766" style="display: inline-block;">
+                <div class="cta-buttons" style="text-align: center;">
+                    <a href="https://apps.apple.com/app/aurely/id6753872766" style="display: inline-block; margin-bottom: 16px;">
                         <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
                             alt="Download on the App Store" style="height: 60px; width: auto;">
                     </a>
+                    
+                    <div>
+                        <a href="https://www.producthunt.com/products/auraly?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-aurely" target="_blank">
+                            <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1028453&theme=light&t=1761730233910" 
+                                 alt="Aurely - Private voice reminders for Mac with no cloud or accounts | Product Hunt" 
+                                 style="width: 250px; height: 54px;" width="250" height="54" />
+                        </a>
+                    </div>
                 </div>
 
                 <div class="cta-features">
-                    <div class="cta-feature">✓ 14-Day Free Trial</div>
-                    <div class="cta-feature">✓ No Credit Card Required</div>
+                    <div class="cta-feature">✓ Completely Free</div>
+                    <div class="cta-feature">✓ No Account Required</div>
                     <div class="cta-feature">✓ macOS 13.0+</div>
                     <div class="cta-feature">✓ 100% Private</div>
                 </div>
@@ -687,8 +578,8 @@
                         <h4>Product</h4>
                         <ul>
                             <li><a href="#features">Features</a></li>
-                            <li><a href="#pricing">Pricing</a></li>
                             <li><a href="#download">Download</a></li>
+                            <li><a href="integrations.html">Integrations</a></li>
                         </ul>
                     </div>
 
@@ -705,7 +596,6 @@
                         <h4>Legal</h4>
                         <ul>
                             <li><a href="privacy.html">Privacy Policy</a></li>
-                            <li><a href="#">Terms of Service</a></li>
                         </ul>
                     </div>
                 </div>

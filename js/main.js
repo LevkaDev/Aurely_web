@@ -110,12 +110,6 @@ document.querySelectorAll('.scroll-reveal').forEach(el => {
 //     category.style.transitionDelay = `${index * 0.15}s`;
 // });
 
-// Add scroll-reveal class to pricing cards
-// document.querySelectorAll('.pricing-card').forEach((card, index) => {
-//     card.classList.add('scroll-reveal');
-//     card.style.transitionDelay = `${index * 0.2}s`;
-// });
-
 // Parallax effect for hero section - DISABLED (causing layout issues)
 // window.addEventListener('scroll', () => {
 //     const scrolled = window.pageYOffset;
@@ -162,6 +156,44 @@ if ('loading' in HTMLImageElement.prototype) {
     script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
     document.body.appendChild(script);
 }
+
+// Theme Toggle Functionality
+function initThemeToggle() {
+    const themeToggle = document.querySelector('.theme-toggle');
+    if (!themeToggle) return;
+    
+    // Get saved theme or default to dark
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+    
+    // Toggle theme on click
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
+    });
+}
+
+function updateThemeIcon(theme) {
+    const themeToggle = document.querySelector('.theme-toggle');
+    if (!themeToggle) return;
+    
+    // Update icon based on theme
+    if (theme === 'light') {
+        themeToggle.innerHTML = '🌙'; // Moon icon for light theme (switch to dark)
+    } else {
+        themeToggle.innerHTML = '☀️'; // Sun icon for dark theme (switch to light)
+    }
+}
+
+// Initialize theme toggle when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    initThemeToggle();
+});
 
 // Console message
 console.log('%cAurely', 'font-size: 48px; font-weight: bold; background: linear-gradient(135deg, #007AFF, #AF52DE); -webkit-background-clip: text; -webkit-text-fill-color: transparent;');

@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Aurely Integrations - Connect with Apple Calendar, Todoist, and Apple Reminders. Privacy-first, opt-in integrations for your reminders.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Integrations - Aurely">
+    <meta property="og:description"
+        content="Connect Aurely with Calendar, Todoist, and Apple Reminders. Your reminders, your choice, your privacy.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aurely.app/integrations.html">
+
+    <title>Integrations - Aurely</title>
+
+    <link rel="stylesheet" href="css/main.css?v=3">
+    <link rel="stylesheet" href="css/glassmorphism.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icon-32.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="images/icon-180.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icon-180.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/icon-512.png">
+
+    <!-- Privacy-friendly analytics by Plausible -->
+    <script async src="https://plausible.io/js/pa-6cYLXXIwPvXJCO3f3Fwil.js"></script>
+    <script>
+        window.plausible = window.plausible || function () { (plausible.q = plausible.q || []).push(arguments) }, plausible.init = plausible.init || function (i) { plausible.o = i || {} }; plausible.init()
+    </script>
+    
+    <!-- Theme initialization - must be before DOM loads to prevent flash -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar glass">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="images/app-icon.png" alt="Aurely" class="nav-logo-img">
+                <span class="nav-title">Aurely</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#demo">Demo</a></li>
+                <li><a href="index.html#languages">Languages</a></li>
+                <li><a href="integrations.html">Integrations</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">☀️</button>
+                <a href="https://apps.apple.com/app/aurely/id6753872766" class="btn btn-primary">App Store</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="integrations-hero" style="padding: 120px 0 60px;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h1 class="gradient-text" style="font-size: 3rem; margin-bottom: 16px;">
+                    Seamless Integrations
+                </h1>
+                <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto;">
+                    Connect Aurely with Calendar, Todoist, and Apple Reminders.<br>
+                    Quick Actions in menu bar for instant access. Real-time sync keeps everything in perfect harmony.<br>
+                    Your reminders, your choice, your privacy.
+                </p>
+            </div>
+
+            <!-- Privacy First Banner -->
+            <div class="glass" style="max-width: 900px; margin: 0 auto 60px; padding: 32px; border-radius: 20px;">
+                <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
+                    <div style="font-size: 2.5rem;">🔒</div>
+                    <div>
+                        <h2 style="color: var(--accent-blue); margin-bottom: 8px; font-size: 1.5rem;">Your Privacy Comes
+                            First</h2>
+                        <p style="color: var(--text-secondary); margin: 0; line-height: 1.6;">
+                            All your reminders stay in Aurely by default. They are only synced to external services when
+                            you explicitly choose to do so at the time of reminder creation. Each reminder gives you
+                            complete control—you decide which integrations to use, if any.
+                        </p>
+                    </div>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                    <div style="padding: 16px; background: rgba(0, 122, 255, 0.05); border-radius: 12px;">
+                        <div style="color: var(--accent-green); font-weight: 600; margin-bottom: 4px;">✓ Opt-in per
+                            reminder</div>
+                        <div style="color: var(--text-secondary); font-size: 0.9rem;">Choose integrations individually
+                        </div>
+                    </div>
+                    <div style="padding: 16px; background: rgba(0, 122, 255, 0.05); border-radius: 12px;">
+                        <div style="color: var(--accent-green); font-weight: 600; margin-bottom: 4px;">✓ No automatic
+                            sync</div>
+                        <div style="color: var(--text-secondary); font-size: 0.9rem;">Nothing leaves Aurely unless you
+                            enable it</div>
+                    </div>
+                    <div style="padding: 16px; background: rgba(0, 122, 255, 0.05); border-radius: 12px;">
+                        <div style="color: var(--accent-green); font-weight: 600; margin-bottom: 4px;">✓ Secure storage
+                        </div>
+                        <div style="color: var(--text-secondary); font-size: 0.9rem;">API tokens in Keychain</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integrations Grid -->
+    <section style="padding: 60px 0;">
+        <div class="container">
+            <!-- Apple Calendar Integration -->
+            <div class="glass" style="margin-bottom: 40px; padding: 40px; border-radius: 20px;">
+                <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
+                    <div style="font-size: 3rem;">📅</div>
+                    <div style="flex: 1;">
+                        <h2 style="font-size: 2rem; margin-bottom: 8px; color: var(--text-primary);">Apple Calendar
+                            Integration</h2>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <span
+                                style="padding: 4px 12px; background: rgba(0, 122, 255, 0.2); border-radius: 12px; color: var(--accent-blue); font-size: 0.9rem; font-weight: 600;">✅
+                                Available Now</span>
+                            <span
+                                style="padding: 4px 12px; background: rgba(0, 122, 255, 0.1); border-radius: 12px; color: var(--accent-blue)); font-size: 0.9rem;">Blue
+                                Badge</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p style="color: var(--text-secondary); margin-bottom: 32px; font-size: 1.1rem; line-height: 1.7;">
+                    Two-way synchronization between Aurely reminders and Apple Calendar events. Create reminders in
+                    Aurely and they appear in your calendar, or import calendar events into Aurely.
+                </p>
+
+                <div style="margin-bottom: 32px;">
+                    <h3 style="color: var(--text-primary); margin-bottom: 16px; font-size: 1.3rem;">Features</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px;">
+                        <div style="padding: 16px; background: rgba(0, 122, 255, 0.05); border-radius: 12px;">
+                            <div style="font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">Two-Way Sync
+                            </div>
+                            <div style="color: var(--text-secondary); font-size: 0.95rem;">Sync reminders to calendar
+                                and import events from calendar automatically</div>
+                        </div>
+                        <div style="padding: 16px; background: rgba(0, 122, 255, 0.05); border-radius: 12px;">
+                            <div style="font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">Smart Event
+                                Creation</div>
+                            <div style="color: var(--text-secondary); font-size: 0.95rem;">Auto-detect all-day events,
+                                smart alarms 15 minutes before</div>
+                        </div>
+                        <div style="padding: 16px; background: rgba(0, 122, 255, 0.05); border-radius: 12px;">
+                            <div style="font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">Time Update Sync</div>
+                            <div style="color: var(--text-secondary); font-size: 0.95rem;">When you change a reminder's time in Aurely (snooze, edit), it automatically updates in Calendar</div>
+                        </div>
+                        <div style="padding: 16px; background: rgba(0, 122, 255, 0.05); border-radius: 12px;">
+                            <div style="font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">Visual Badges</div>
+                            <div style="color: var(--text-secondary); font-size: 0.95rem;">Blue badge appears on all synced reminders (both imported and Aurely-created)</div>
+                        </div>
+                        <div style="padding: 16px; background: rgba(0, 122, 255, 0.05); border-radius: 12px;">
+                            <div style="font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">Smart Unsyncing</div>
+                            <div style="color: var(--text-secondary); font-size: 0.95rem;">Unchecking badge in Edit dialog: imported events stay in Calendar, Aurely-created events are removed from Calendar</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 32px;">
+                    <h3 style="color: var(--text-primary); margin-bottom: 16px; font-size: 1.3rem;">Setup Instructions
+                    </h3>
+                    <ol style="padding-left: 24px; color: var(--text-secondary); line-height: 2;">
+                        <li style="margin-bottom: 12px;">Open Aurely → <strong>Settings</strong> → <strong>Integrations</strong> → <strong>Calendar Sync</strong></li>
+                        <li style="margin-bottom: 12px;">Toggle <strong>"Enable Calendar Sync"</strong> to ON</li>
+                        <li style="margin-bottom: 12px;">Click <strong>"Grant Access"</strong> and allow Calendar access in the system dialog</li>
+                        <li style="margin-bottom: 12px;">(Optional) Select your preferred calendar from the <strong>"Default Calendar"</strong> picker</li>
+                        <li style="margin-bottom: 12px;">Configure sync direction: <strong>"Sync Reminders to Calendar"</strong> and/or <strong>"Import Calendar Events"</strong></li>
+                        <li>When creating a reminder, tap the <strong>📅 Calendar</strong> badge (blue) to sync it</li>
+                    </ol>
+                </div>
+
+                <div
+                    style="background: rgba(0, 122, 255, 0.1); border-left: 4px solid var(--accent-blue); padding: 16px; border-radius: 8px;">
+                    <div style="font-weight: 600; margin-bottom: 8px; color: var(--accent-blue);">💡 Pro Tip</div>
+                    <div style="color: var(--text-secondary);">Set reminders to 00:00 for all-day calendar events.
+                        Calendar notifications appear 15 minutes before timed events.</div>
+                </div>
+            </div>
+
+            <!-- Todoist Integration -->
+            <div class="glass" style="margin-bottom: 40px; padding: 40px; border-radius: 20px;">
+                <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
+                    <div style="font-size: 3rem;">✅</div>
+                    <div style="flex: 1;">
+                        <h2 style="font-size: 2rem; margin-bottom: 8px; color: var(--text-primary);">Todoist
+                            Integration</h2>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <span
+                                style="padding: 4px 12px; background: rgba(175, 82, 222, 0.2); border-radius: 12px; color: var(--accent-purple); font-size: 0.9rem; font-weight: 600;">✅
+                                Available Now</span>
+                            <span
+                                style="padding: 4px 12px; background: rgba(175, 82, 222, 0.1); border-radius: 12px; color: var(--accent-purple); font-size: 0.9rem;">Purple
+                                Badge</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p style="color: var(--text-secondary); margin-bottom: 32px; font-size: 1.1rem; line-height: 1.7;">
+                    Two-way synchronization between Aurely reminders and Todoist tasks. Create reminders in Aurely and
+                    they appear as tasks in Todoist, or import today's tasks from Todoist into Aurely.
+                </p>
+
+                <div style="margin-bottom: 32px;">
+                    <h3 style="color: var(--text-primary); margin-bottom: 16px; font-size: 1.3rem;">Features</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px;">
+                        <div style="padding: 16px; background: rgba(175, 82, 222, 0.05); border-radius: 12px;">
+                            <div style="font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">Two-Way Sync
+                            </div>
+                            <div style="color: var(--text-secondary); font-size: 0.95rem;">Sync reminders to Todoist
+                                and import tasks due today</div>
+                        </div>
+                        <div style="padding: 16px; background: rgba(175, 82, 222, 0.05); border-radius: 12px;">
+                            <div style="font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">Priority
+                                Mapping</div>
+                            <div style="color: var(--text-secondary); font-size: 0.95rem;">Aurely priorities map to
+                                Todoist priorities (Low → Normal, Medium → High, High → Urgent)</div>
+                        </div>
+                        <div style="padding: 16px; background: rgba(175, 82, 222, 0.05); border-radius: 12px;">
+                            <div style="font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">Completion
+                                Sync</div>
+                            <div style="color: var(--text-secondary); font-size: 0.95rem;">Completing in one app
+                                automatically completes in the other</div>
+                        </div>
+                        <div style="padding: 16px; background: rgba(175, 82, 222, 0.05); border-radius: 12px;">
+                            <div style="font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">Time Update Sync</div>
+                            <div style="color: var(--text-secondary); font-size: 0.95rem;">When you change a reminder's time in Aurely (snooze, edit), it automatically updates in Todoist</div>
+                        </div>
+                        <div style="padding: 16px; background: rgba(175, 82, 222, 0.05); border-radius: 12px;">
+                            <div style="font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">Visual Badges</div>
+                            <div style="color: var(--text-secondary); font-size: 0.95rem;">Purple badge appears on all synced reminders (both imported and Aurely-created)</div>
+                        </div>
+                        <div style="padding: 16px; background: rgba(175, 82, 222, 0.05); border-radius: 12px;">
+                            <div style="font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">Smart Unsyncing</div>
+                            <div style="color: var(--text-secondary); font-size: 0.95rem;">Unchecking badge in Edit dialog: imported tasks stay in Todoist, Aurely-created tasks are removed from Todoist</div>
+                        </div>
+                        <div style="padding: 16px; background: rgba(175, 82, 222, 0.05); border-radius: 12px;">
+                            <div style="font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">Deep
+                                Linking</div>
+                            <div style="color: var(--text-secondary); font-size: 0.95rem;">Todoist tasks include links
+                                back to Aurely reminders</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 32px;">
+                    <h3 style="color: var(--text-primary); margin-bottom: 16px; font-size: 1.3rem;">Setup Instructions
+                    </h3>
+                    <ol style="padding-left: 24px; color: var(--text-secondary); line-height: 2;">
+                        <li style="margin-bottom: 12px;">Get your Todoist API token: <strong>Todoist Settings</strong> →
+                            <strong>Integrations</strong> → <strong>Developer</strong> (or click <strong>"Get Token"</strong> in Aurely)</li>
+                        <li style="margin-bottom: 12px;">Open Aurely → <strong>Settings</strong> → <strong>Integrations</strong> → <strong>Todoist Sync</strong></li>
+                        <li style="margin-bottom: 12px;">Toggle <strong>"Enable Todoist Sync"</strong> to ON</li>
+                        <li style="margin-bottom: 12px;">Paste your API token into the <strong>"API Token"</strong> field (saved securely in Keychain)</li>
+                        <li style="margin-bottom: 12px;">Configure sync direction: <strong>"Sync Reminders to Todoist"</strong> and/or <strong>"Import Todoist Tasks"</strong></li>
+                        <li>When creating a reminder, tap the <strong>✅ Todoist</strong> badge (purple) to sync it</li>
+                    </ol>
+                </div>
+
+                <div
+                    style="background: rgba(175, 82, 222, 0.1); border-left: 4px solid var(--accent-purple); padding: 16px; border-radius: 8px;">
+                    <div style="font-weight: 600; margin-bottom: 8px; color: var(--accent-purple);">💡 Pro Tip</div>
+                    <div style="color: var(--text-secondary);">Only tasks due today are imported - perfect for daily
+                        workflow. Tasks go to your default Todoist project.</div>
+                </div>
+            </div>
+
+            <!-- Apple Reminders Integration -->
+            <div class="glass" style="margin-bottom: 40px; padding: 40px; border-radius: 20px;">
+                <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
+                    <div style="font-size: 3rem;">🔔</div>
+                    <div style="flex: 1;">
+                        <h2 style="font-size: 2rem; margin-bottom: 8px; color: var(--text-primary);">Apple Reminders
+                            Integration</h2>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <span
+                                style="padding: 4px 12px; background: rgba(255, 149, 0, 0.2); border-radius: 12px; color: var(--accent-orange); font-size: 0.9rem; font-weight: 600;">✅
+                                Available Now</span>
+                            <span
+                                style="padding: 4px 12px; background: rgba(255, 149, 0, 0.1); border-radius: 12px; color: var(--accent-orange); font-size: 0.9rem;">Orange
+                                Badge</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p style="color: var(--text-secondary); margin-bottom: 32px; font-size: 1.1rem; line-height: 1.7;">
+                    Two-way synchronization between Aurely reminders and Apple Reminders. Instant sync with reactive
+                    synchronization—changes happen immediately, no waiting for sync intervals.
+                </p>
+
+                <div style="margin-bottom: 32px;">
+                    <h3 style="color: var(--text-primary); margin-bottom: 16px; font-size: 1.3rem;">Features</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px;">
+                        <div style="padding: 16px; background: rgba(255, 149, 0, 0.05); border-radius: 12px;">
+                            <div style="font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">Instant Sync
+                            </div>
+                            <div style="color: var(--text-secondary); font-size: 0.95rem;">Reactive synchronization -
+                                changes happen immediately</div>
+                        </div>
+                        <div style="padding: 16px; background: rgba(255, 149, 0, 0.05); border-radius: 12px;">
+                            <div style="font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">Two-Way Sync
+                            </div>
+                            <div style="color: var(--text-secondary); font-size: 0.95rem;">Sync reminders to Apple
+                                Reminders and import from Apple Reminders</div>
+                        </div>
+                        <div style="padding: 16px; background: rgba(255, 149, 0, 0.05); border-radius: 12px;">
+                            <div style="font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">Completion
+                                Sync</div>
+                            <div style="color: var(--text-secondary); font-size: 0.95rem;">Completing in one app
+                                automatically completes in the other</div>
+                        </div>
+                        <div style="padding: 16px; background: rgba(255, 149, 0, 0.05); border-radius: 12px;">
+                            <div style="font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">Time Update Sync</div>
+                            <div style="color: var(--text-secondary); font-size: 0.95rem;">When you change a reminder's time in Aurely (snooze, edit via menu bar popover), it automatically updates in Apple Reminders</div>
+                        </div>
+                        <div style="padding: 16px; background: rgba(255, 149, 0, 0.05); border-radius: 12px;">
+                            <div style="font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">Visual Badges</div>
+                            <div style="color: var(--text-secondary); font-size: 0.95rem;">Orange badge appears on all synced reminders (both imported and Aurely-created)</div>
+                        </div>
+                        <div style="padding: 16px; background: rgba(255, 149, 0, 0.05); border-radius: 12px;">
+                            <div style="font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">Smart
+                                Notifications</div>
+                            <div style="color: var(--text-secondary); font-size: 0.95rem;">Aurely prevents duplicate
+                                notifications for synced reminders</div>
+                        </div>
+                        <div style="padding: 16px; background: rgba(255, 149, 0, 0.05); border-radius: 12px;">
+                            <div style="font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">Smart Unsyncing</div>
+                            <div style="color: var(--text-secondary); font-size: 0.95rem;">Unchecking badge in Edit dialog: imported reminders stay in Apple Reminders, Aurely-created reminders are removed from Apple Reminders</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 32px;">
+                    <h3 style="color: var(--text-primary); margin-bottom: 16px; font-size: 1.3rem;">Setup Instructions
+                    </h3>
+                    <ol style="padding-left: 24px; color: var(--text-secondary); line-height: 2;">
+                        <li style="margin-bottom: 12px;">Open Aurely → <strong>Settings</strong> → <strong>Integrations</strong> → <strong>Apple Reminders Sync</strong></li>
+                        <li style="margin-bottom: 12px;">Toggle <strong>"Enable Reminders Sync"</strong> to ON</li>
+                        <li style="margin-bottom: 12px;">Click <strong>"Grant Access"</strong> and allow Reminders access (on macOS 14.0+, choose "Full Access")</li>
+                        <li style="margin-bottom: 12px;">(Optional) Select your preferred list from the <strong>"Default Reminder List"</strong> picker</li>
+                        <li style="margin-bottom: 12px;">Configure sync direction: <strong>"Sync Reminders to Apple"</strong> and/or <strong>"Import Apple Reminders"</strong></li>
+                        <li>When creating a reminder, tap the <strong>🔔 Reminders</strong> badge (orange) to sync it</li>
+                    </ol>
+                </div>
+
+                <div
+                    style="background: rgba(255, 149, 0, 0.1); border-left: 4px solid var(--accent-orange); padding: 16px; border-radius: 8px;">
+                    <div style="font-weight: 600; margin-bottom: 8px; color: var(--accent-orange);">💡 Pro Tip</div>
+                    <div style="color: var(--text-secondary);">Instant sync means changes happen immediately - no waiting
+                        for sync intervals. Perfect for real-time workflow management.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section style="padding: 60px 0; background: rgba(0, 0, 0, 0.2);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h2 class="gradient-text" style="font-size: 2.5rem; margin-bottom: 16px;">How It Works</h2>
+                <p style="color: var(--text-secondary); font-size: 1.1rem;">Simple, privacy-first integration workflow
+                </p>
+            </div>
+
+            <div class="glass" style="max-width: 800px; margin: 0 auto; padding: 40px; border-radius: 20px;">
+                <div style="display: flex; flex-direction: column; gap: 32px;">
+                    <div style="display: flex; gap: 20px; align-items: flex-start;">
+                        <div
+                            style="flex-shrink: 0; width: 48px; height: 48px; border-radius: 50%; background: var(--accent-blue); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem;">
+                            1</div>
+                        <div>
+                            <h3 style="color: var(--text-primary); margin-bottom: 8px; font-size: 1.2rem;">Type or Record
+                                Your Reminder</h3>
+                            <p style="color: var(--text-secondary); line-height: 1.7;">Create a reminder using voice
+                                recording or text input in Aurely as usual.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 20px; align-items: flex-start;">
+                        <div
+                            style="flex-shrink: 0; width: 48px; height: 48px; border-radius: 50%; background: var(--accent-purple); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem;">
+                            2</div>
+                        <div>
+                            <h3 style="color: var(--text-primary); margin-bottom: 8px; font-size: 1.2rem;">Integration
+                                Badges Appear</h3>
+                            <p style="color: var(--text-secondary); line-height: 1.7;">When you start typing, integration
+                                badges (📅 Calendar, ✅ Todoist, 🔔 Reminders) appear above the text input—only if you
+                                have the integration enabled in Settings.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 20px; align-items: flex-start;">
+                        <div
+                            style="flex-shrink: 0; width: 48px; height: 48px; border-radius: 50%; background: var(--accent-orange); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem;">
+                            3</div>
+                        <div>
+                            <h3 style="color: var(--text-primary); margin-bottom: 8px; font-size: 1.2rem;">Tap Badges to
+                                Select</h3>
+                            <p style="color: var(--text-secondary); line-height: 1.7;">Tap the badges for services you
+                                want to sync with. Selected badges turn colored (blue, purple, or orange). Unselected
+                                badges remain outlined.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 20px; align-items: flex-start;">
+                        <div
+                            style="flex-shrink: 0; width: 48px; height: 48px; border-radius: 50%; background: var(--accent-green); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem;">
+                            4</div>
+                        <div>
+                            <h3 style="color: var(--text-primary); margin-bottom: 8px; font-size: 1.2rem;">Create and Sync
+                            </h3>
+                            <p style="color: var(--text-secondary); line-height: 1.7;">Create the reminder as usual.
+                                After confirmation (when creation toast is confirmed), the reminder syncs to selected
+                                services automatically. Use Quick Actions in the menu bar to manage reminders instantly—snooze, edit time, or modify sync status.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    style="margin-top: 32px; padding: 20px; background: rgba(0, 122, 255, 0.1); border-radius: 12px; border-left: 4px solid var(--accent-blue);">
+                    <div style="font-weight: 600; margin-bottom: 8px; color: var(--accent-blue);">🔒 Privacy Control
+                    </div>
+                    <div style="color: var(--text-secondary); line-height: 1.7;">
+                        <strong>No badges = no sync:</strong> If you don't select any badges, the reminder stays only in
+                        Aurely. Nothing syncs unless you explicitly tap a badge. Complete control over your data.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Actions Section -->
+    <section style="padding: 60px 0; background: rgba(0, 0, 0, 0.2);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h2 class="gradient-text" style="font-size: 2.5rem; margin-bottom: 16px;">Quick Actions in Menu Bar</h2>
+                <p style="color: var(--text-secondary); font-size: 1.1rem;">Manage reminders instantly without leaving your current app</p>
+            </div>
+
+            <div class="glass" style="max-width: 800px; margin: 0 auto; padding: 40px; border-radius: 20px;">
+                <div style="display: flex; flex-direction: column; gap: 24px;">
+                    <div style="padding: 24px; background: rgba(0, 122, 255, 0.1); border-radius: 16px;">
+                        <h3 style="color: var(--text-primary); margin-bottom: 12px; font-size: 1.3rem;">⚡ Instant Access</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.7;">
+                            Click the Aurely icon in your menu bar to access Quick Actions. View upcoming reminders, snooze, edit times, and manage sync status—all without switching apps.
+                        </p>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px;">
+                        <div style="padding: 20px; background: rgba(0, 122, 255, 0.05); border-radius: 12px;">
+                            <div style="font-size: 2rem; margin-bottom: 8px;">⏰</div>
+                            <h4 style="color: var(--text-primary); margin-bottom: 8px; font-weight: 600;">Snooze & Edit Time</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+                                Change reminder times directly from the menu bar. Time updates automatically sync to all connected services (Calendar, Todoist, Apple Reminders).
+                            </p>
+                        </div>
+
+                        <div style="padding: 20px; background: rgba(0, 122, 255, 0.05); border-radius: 12px;">
+                            <div style="font-size: 2rem; margin-bottom: 8px;">🔄</div>
+                            <h4 style="color: var(--text-primary); margin-bottom: 8px; font-weight: 600;">Edit Sync Status</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+                                Modify integration badges from the Edit Reminder dialog. Smart unsyncing keeps imported items in external services, removes Aurely-created items.
+                            </p>
+                        </div>
+
+                        <div style="padding: 20px; background: rgba(0, 122, 255, 0.05); border-radius: 12px;">
+                            <div style="font-size: 2rem; margin-bottom: 8px;">📋</div>
+                            <h4 style="color: var(--text-primary); margin-bottom: 8px; font-weight: 600;">View Upcoming</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+                                See all your upcoming reminders at a glance. Integration badges show which services each reminder is synced with.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section style="padding: 60px 0;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h2 class="gradient-text" style="font-size: 2.5rem; margin-bottom: 16px;">Integration Comparison</h2>
+                <p style="color: var(--text-secondary); font-size: 1.1rem;">Choose the right integration for your needs
+                </p>
+            </div>
+
+            <div class="glass" style="overflow-x: auto; padding: 40px; border-radius: 20px;">
+                <table style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid rgba(255, 255, 255, 0.1);">
+                            <th style="padding: 16px; text-align: left; color: var(--text-primary); font-weight: 600;">
+                                Feature</th>
+                            <th style="padding: 16px; text-align: center; color: var(--accent-blue); font-weight: 600;">
+                                Calendar</th>
+                            <th style="padding: 16px; text-align: center; color: var(--accent-purple); font-weight: 600;">
+                                Todoist</th>
+                            <th style="padding: 16px; text-align: center; color: var(--accent-orange); font-weight: 600;">
+                                Apple Reminders</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                            <td style="padding: 16px; color: var(--text-secondary);">Sync Direction</td>
+                            <td style="padding: 16px; text-align: center; color: var(--text-secondary);">Two-way</td>
+                            <td style="padding: 16px; text-align: center; color: var(--text-secondary);">Two-way</td>
+                            <td style="padding: 16px; text-align: center; color: var(--text-secondary);">Two-way</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                            <td style="padding: 16px; color: var(--text-secondary);">Sync Speed</td>
+                            <td style="padding: 16px; text-align: center; color: var(--text-secondary);">Instant</td>
+                            <td style="padding: 16px; text-align: center; color: var(--text-secondary);">Periodic (1-60
+                                min)</td>
+                            <td style="padding: 16px; text-align: center; color: var(--text-secondary);">Instant</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                            <td style="padding: 16px; color: var(--text-secondary);">Import Filter</td>
+                            <td style="padding: 16px; text-align: center; color: var(--text-secondary);">Events with
+                                times</td>
+                            <td style="padding: 16px; text-align: center; color: var(--text-secondary);">Tasks due today
+                            </td>
+                            <td style="padding: 16px; text-align: center; color: var(--text-secondary);">All upcoming
+                            </td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                            <td style="padding: 16px; color: var(--text-secondary);">All-Day Events</td>
+                            <td style="padding: 16px; text-align: center; color: var(--accent-green);">✓</td>
+                            <td style="padding: 16px; text-align: center; color: var(--text-secondary);">—</td>
+                            <td style="padding: 16px; text-align: center; color: var(--text-secondary);">—</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                            <td style="padding: 16px; color: var(--text-secondary);">Completion Sync</td>
+                            <td style="padding: 16px; text-align: center; color: var(--text-secondary);">—</td>
+                            <td style="padding: 16px; text-align: center; color: var(--accent-green);">✓</td>
+                            <td style="padding: 16px; text-align: center; color: var(--accent-green);">✓</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                            <td style="padding: 16px; color: var(--text-secondary);">Authentication</td>
+                            <td style="padding: 16px; text-align: center; color: var(--text-secondary);">System
+                                permission</td>
+                            <td style="padding: 16px; text-align: center; color: var(--text-secondary);">API token</td>
+                            <td style="padding: 16px; text-align: center; color: var(--text-secondary);">System
+                                permission</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                            <td style="padding: 16px; color: var(--text-secondary);">Time Update Sync</td>
+                            <td style="padding: 16px; text-align: center; color: var(--accent-green);">✓</td>
+                            <td style="padding: 16px; text-align: center; color: var(--accent-green);">✓</td>
+                            <td style="padding: 16px; text-align: center; color: var(--accent-green);">✓</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                            <td style="padding: 16px; color: var(--text-secondary);">Edit Sync Status</td>
+                            <td style="padding: 16px; text-align: center; color: var(--accent-green);">✓</td>
+                            <td style="padding: 16px; text-align: center; color: var(--accent-green);">✓</td>
+                            <td style="padding: 16px; text-align: center; color: var(--accent-green);">✓</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px; color: var(--text-secondary);">Badge Shows</td>
+                            <td style="padding: 16px; text-align: center; color: var(--text-secondary);">All synced reminders</td>
+                            <td style="padding: 16px; text-align: center; color: var(--text-secondary);">All synced reminders</td>
+                            <td style="padding: 16px; text-align: center; color: var(--text-secondary);">All synced reminders</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px; color: var(--text-secondary);">Visual Badge</td>
+                            <td style="padding: 16px; text-align: center; color: var(--accent-blue); font-weight: 600;">
+                                📅 Blue</td>
+                            <td style="padding: 16px; text-align: center; color: var(--accent-purple); font-weight: 600;">
+                                ✅ Purple</td>
+                            <td style="padding: 16px; text-align: center; color: var(--accent-orange); font-weight: 600;">
+                                🔔 Orange</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Section -->
+    <section style="padding: 60px 0; background: rgba(0, 0, 0, 0.2);">
+        <div class="container">
+            <div class="glass" style="max-width: 800px; margin: 0 auto; padding: 40px; border-radius: 20px; text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 20px;">🎁</div>
+                <h2 style="font-size: 2rem; margin-bottom: 16px; color: var(--text-primary);">Free for Everyone</h2>
+                <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.7; margin-bottom: 24px;">
+                    All integrations are included in Aurely at no cost. Aurely is completely free, with every feature
+                    available to everyone.
+                </p>
+                <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px;">
+                    <div style="padding: 16px; background: rgba(34, 197, 94, 0.1); border-radius: 12px;">
+                        <div style="color: var(--accent-green); font-weight: 600; margin-bottom: 4px;">✓ All
+                            integrations included</div>
+                        <div style="color: var(--text-secondary); font-size: 0.95rem;">Apple Calendar, Apple Reminders,
+                            and Todoist with two-way sync</div>
+                    </div>
+                    <div style="padding: 16px; background: rgba(34, 197, 94, 0.1); border-radius: 12px;">
+                        <div style="color: var(--accent-green); font-weight: 600; margin-bottom: 4px;">✓ No
+                            subscriptions</div>
+                        <div style="color: var(--text-secondary); font-size: 0.95rem;">No in-app purchases, no limits
+                        </div>
+                    </div>
+                </div>
+                <a href="https://apps.apple.com/app/aurely/id6753872766" class="btn btn-primary">Download on the App Store</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Troubleshooting Section -->
+    <section style="padding: 60px 0;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h2 class="gradient-text" style="font-size: 2.5rem; margin-bottom: 16px;">Troubleshooting</h2>
+                <p style="color: var(--text-secondary); font-size: 1.1rem;">Common issues and solutions</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+                <div class="glass" style="padding: 32px; border-radius: 20px;">
+                    <h3 style="color: var(--text-primary); margin-bottom: 16px; font-size: 1.3rem;">Integration badges
+                        not appearing</h3>
+                    <ul style="padding-left: 20px; color: var(--text-secondary); line-height: 2;">
+                        <li>Verify integration is enabled in Settings</li>
+                        <li>Ensure necessary permissions are granted</li>
+                        <li>Check you've started typing a reminder</li>
+                    </ul>
+                </div>
+
+                <div class="glass" style="padding: 32px; border-radius: 20px;">
+                    <h3 style="color: var(--text-primary); margin-bottom: 16px; font-size: 1.3rem;">Sync not working
+                    </h3>
+                    <ul style="padding-left: 20px; color: var(--text-secondary); line-height: 2;">
+                        <li>Verify both sync directions are enabled</li>
+                        <li>Check sync interval hasn't expired (Calendar/Todoist)</li>
+                        <li>Ensure reminder has a due date</li>
+                        <li>Check network connection (for Todoist)</li>
+                    </ul>
+                </div>
+
+                <div class="glass" style="padding: 32px; border-radius: 20px;">
+                    <h3 style="color: var(--text-primary); margin-bottom: 16px; font-size: 1.3rem;">Permission issues
+                    </h3>
+                    <ul style="padding-left: 20px; color: var(--text-secondary); line-height: 2;">
+                        <li>Go to System Settings → Privacy & Security</li>
+                        <li>Ensure Aurely is listed and enabled</li>
+                        <li>Try clicking "Grant Access" again in Aurely</li>
+                        <li>On macOS 14.0+, choose "Full Access" for Reminders</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <p style="color: var(--text-secondary); margin-bottom: 16px;">Still need help?</p>
+                <a href="mailto:support@aurely.app" class="btn btn-secondary">Contact Support</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/app-icon.png" alt="Aurely" class="footer-logo-img">
+                    <span class="footer-title">Aurely</span>
+                    <p class="footer-tagline">The Most Intelligent Reminder App for Mac</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="index.html#features">Features</a></li>
+                            <li><a href="index.html#download">Download</a></li>
+                            <li><a href="integrations.html">Integrations</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="index.html#faq">FAQ</a></li>
+                            <li><a href="index.html#demo">Demo</a></li>
+                            <li><a href="mailto:support@aurely.app">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Aurely. Made with ❤️ for Mac users.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+
